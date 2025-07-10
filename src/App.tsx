@@ -3,6 +3,7 @@ import { Provider } from "react-redux"
 
 import { store } from "./app/store"
 
+import { AuthLayout } from "./layouts/AuthLayout/AuthLayout"
 import { PublicRouteLayout } from "./layouts/PublicRouteLayout/PublicRouteLayout"
 import { ProtectedRouteLayout } from "./layouts/ProtectedRouteLayout/ProtectedRouteLayout"
 
@@ -13,7 +14,7 @@ function App() {
         <Routes>
 
           <Route element={<PublicRouteLayout />}>
-            <Route element={<Outlet />}> { /* TODO: AuthLayout */}
+            <Route element={<AuthLayout />}>
               <Route path="/login" element={<h1>TODO!</h1>} />
               <Route path="/register" element={<h1>TODO!</h1>} />
               <Route path="/forgot-password" element={<h1>TODO!</h1>} />
