@@ -8,6 +8,7 @@ import { PublicRouteLayout } from "./layouts/PublicRouteLayout/PublicRouteLayout
 import { ProtectedRouteLayout } from "./layouts/ProtectedRouteLayout/ProtectedRouteLayout"
 
 import { Login } from "./pages/Login/Login"
+import { Register } from "./pages/Register/Register"
 function App() {
   return (
     <Provider store={store}>
@@ -17,7 +18,7 @@ function App() {
           <Route element={<PublicRouteLayout />}>
             <Route element={<AuthLayout />}>
               <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<h1>TODO!</h1>} />
+              <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<h1>TODO!</h1>} />
             </Route>
           </Route>
