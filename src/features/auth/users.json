@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "name": "John Doe",
+        "username": "JohnDoe",
+        "email": "johndoe@example.com",
+        "password": "johndoe@789",
+        "role": "admin"
+    },
+    {
+        "id": "2",
+        "name": "Alice Addendall",
+        "username": "AliceAddendall",
+        "email": "aliceaddendall@example.com",
+        "password": "aliceaddendall@789",
+        "role": "operations"
+    },
+    {
+        "id": "3",
+        "name": "Bob Brady",
+        "username": "BobBrady",
+        "email": "bobbrady@example.com",
+        "password": "bobbrady@789",
+        "role": "techsupport"
+    },
+    {
+        "id": "4",
+        "name": "John Smith",
+        "username": "JohnSmith",
+        "email": "johnsmith@example.com",
+        "password": "johnsmith@789",
+        "role": "user"
+    }
+]
