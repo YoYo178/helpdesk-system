@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom"
 import { Provider } from "react-redux"
 
 import { store } from "./app/store"
@@ -5,6 +6,37 @@ import { store } from "./app/store"
 function App() {
   return (
     <Provider store={store}>
+      <BrowserRouter basename="/helpdesk-system">
+        <Routes>
+
+          <Route element={<Outlet />}> { /* TODO: PublicRouteLayout */}
+            <Route element={<Outlet />}> { /* TODO: AuthLayout */}
+              <Route path="/login" element={<h1>TODO!</h1>} />
+              <Route path="/register" element={<h1>TODO!</h1>} />
+              <Route path="/forgot-password" element={<h1>TODO!</h1>} />
+            </Route>
+          </Route>
+
+          <Route element={<Outlet />}> { /* TODO: PrivateRouteLayout */}
+            <Route element={<Outlet />}> { /* TODO: DashboardLayout */}
+              <Route path="/dashboard" element={<h1>TODO!</h1>} />
+              <Route path='/new-ticket' element={<h1>TODO!</h1>} />
+              <Route path='/my-ticket' element={<h1>TODO!</h1>} />
+              <Route path='/ticket-approval' element={<h1>TODO!</h1>} />
+              <Route path='/performance' element={<h1>TODO!</h1>} />
+              <Route path='/database' element={<h1>TODO!</h1>} />
+              <Route path='/setting' element={<h1>TODO!</h1>} />
+              <Route path='/user-log-history' element={<h1>TODO!</h1>} />
+
+              <Route path='/profile' element={<h1>TODO!</h1>} />
+              <Route path='/profile/edit' element={<h1>TODO!</h1>} />
+
+            </Route>
+          </Route>
+
+          <Route path="*" element={<h1>Not found!</h1>} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   )
 }
