@@ -3,13 +3,16 @@ import { Provider } from "react-redux"
 
 import { store } from "./app/store"
 
+import { PublicRouteLayout } from "./layouts/PublicRouteLayout/PublicRouteLayout"
+import { ProtectedRouteLayout } from "./layouts/ProtectedRouteLayout/ProtectedRouteLayout"
+
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter basename="/helpdesk-system">
         <Routes>
 
-          <Route element={<Outlet />}> { /* TODO: PublicRouteLayout */}
+          <Route element={<PublicRouteLayout />}>
             <Route element={<Outlet />}> { /* TODO: AuthLayout */}
               <Route path="/login" element={<h1>TODO!</h1>} />
               <Route path="/register" element={<h1>TODO!</h1>} />
@@ -17,7 +20,7 @@ function App() {
             </Route>
           </Route>
 
-          <Route element={<Outlet />}> { /* TODO: PrivateRouteLayout */}
+          <Route element={<ProtectedRouteLayout />}>
             <Route element={<Outlet />}> { /* TODO: DashboardLayout */}
               <Route path="/dashboard" element={<h1>TODO!</h1>} />
               <Route path='/new-ticket' element={<h1>TODO!</h1>} />
