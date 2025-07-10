@@ -1,0 +1,79 @@
+.login-modal {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+
+    background-color: #a3e2d8;
+    height: auto;
+    width: 55%;
+    max-width: 600px;
+    min-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4rem;
+    margin: auto;
+}
+
+.login-heading {
+    font-style: italic;
+    
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.login-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 4vh;
+    width: 100%;
+}
+
+.login-fields input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.login-button {
+    padding: 1rem 4rem;
+    background-color: #02cc17;
+    border: none;
+    border-radius: 15px;
+
+    margin-bottom: 2rem;
+    color: white;
+    font-size: clamp(1.2rem, 4vw, 1.7rem);
+}
+
+.references {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.forgot-password-redirect-button,
+.register-redirect-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #ea0000;
+}
+
+.register-redirect-button {
+    color: #000;
+    text-decoration: none;
+}
+
+.login-button:hover,
+.forgot-password-redirect-button:hover,
+.register-redirect-button:hover {
+    cursor: pointer;
+}
