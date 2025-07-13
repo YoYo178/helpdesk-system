@@ -1,0 +1,30 @@
+[
+    {
+        "sign-in-time": "13/08/21 -- 08:00AM",
+        "sign-out-time": "13/08/21 -- 08:00AM",
+        "staff-id": "XL000001",
+        "department": "Operations Team",
+        "activity": "Create Team"
+    },
+    {
+        "sign-in-time": "13/08/21 -- 08:00AM",
+        "sign-out-time": "13/08/21 -- 08:00AM",
+        "staff-id": "XL000002",
+        "department": "Technical Support",
+        "activity": "Close Ticket"
+    },
+    {
+        "sign-in-time": "13/08/21 -- 08:00AM",
+        "sign-out-time": "13/08/21 -- 08:00AM",
+        "staff-id": "XL000003",
+        "department": "User",
+        "activity": "Create Ticket"
+    },
+    {
+        "sign-in-time": "13/08/21 -- 08:00AM",
+        "sign-out-time": "13/08/21 -- 08:00AM",
+        "staff-id": "XL000004",
+        "department": "Admin",
+        "activity": "Change settings"
+    }
+]
