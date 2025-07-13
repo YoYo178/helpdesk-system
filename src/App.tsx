@@ -11,6 +11,7 @@ import { ProtectedRouteLayout } from "./layouts/ProtectedRouteLayout/ProtectedRo
 import { Login } from "./pages/Login/Login"
 import { Register } from "./pages/Register/Register"
 import { ForgotPassword } from "./pages/PasswordReset/ForgotPassword"
+import { Dashboard } from "./pages/Dashboard/Dashboard"
 function App() {
   return (
     <Provider store={store}>
@@ -27,7 +28,7 @@ function App() {
 
           <Route element={<ProtectedRouteLayout />}>
             <Route element={<DashboardLayout />}>
-              <Route path="/dashboard" element={<h1>TODO!</h1>} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path='/new-ticket' element={<h1>TODO!</h1>} />
               <Route path='/my-ticket' element={<h1>TODO!</h1>} />
               <Route path='/ticket-approval' element={<h1>TODO!</h1>} />
