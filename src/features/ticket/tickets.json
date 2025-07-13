@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1114",
+        "subject": "Login issue",
+        "category": "access-issue",
+        "priority": "High",
+        "date": "03/08/2021",
+        "status": "in-progress",
+        "personInCharge": "Bob Brady",
+        "supportBy": "Tech Support",
+        "rating": 0
+    },
+    {
+        "id": "1124",
+        "subject": "New ticket issue",
+        "category": "access-issue",
+        "priority": "Medium",
+        "date": "14/08/2021",
+        "status": "on-hold",
+        "personInCharge": "Bob Brady",
+        "supportBy": "Tech Support",
+        "rating": 0
+    },
+    {
+        "id": "1224",
+        "subject": "New request",
+        "category": "feedback",
+        "priority": "Low",
+        "date": "13/08/2021",
+        "status": "closed",
+        "personInCharge": "Alice Addendall",
+        "supportBy": "Operations Team",
+        "rating": 4.5
+    },
+    {
+        "id": "1234",
+        "subject": "Login issue",
+        "category": "access-issue",
+        "priority": "High",
+        "date": "13/08/2021",
+        "status": "in-progress",
+        "personInCharge": "Alice Addendall",
+        "supportBy": "Operations Team",
+        "rating": 0
+    },
+    {
+        "id": "1244",
+        "subject": "Ticket submission",
+        "category": "ticketing",
+        "priority": "High",
+        "date": "14/08/2021",
+        "status": "in-progress",
+        "personInCharge": "Alice Addendall",
+        "supportBy": "Operations Team",
+        "rating": 0
+    }
+]
