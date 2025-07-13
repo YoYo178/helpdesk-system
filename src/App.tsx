@@ -7,6 +7,7 @@ import { AuthLayout } from "./layouts/AuthLayout/AuthLayout"
 import { DashboardLayout } from "./layouts/DashboardLayout/DashboardLayout"
 import { PublicRouteLayout } from "./layouts/PublicRouteLayout/PublicRouteLayout"
 import { ProtectedRouteLayout } from "./layouts/ProtectedRouteLayout/ProtectedRouteLayout"
+import { RoleProtectedRouteLayout } from "./layouts/RoleProtectedRouteLayout/RoleProtectedRouteLayout"
 
 import { Login } from "./pages/Login/Login"
 import { Register } from "./pages/Register/Register"
@@ -22,6 +23,7 @@ import { UserLogHistory } from "./pages/UserLogHistory/UserLogHistory"
 import { Profile } from "./pages/Profile/Profile"
 import { EditProfile } from "./pages/EditProfile/EditProfile"
 
+import { Forbidden } from "./pages/Forbidden/Forbidden"
 function App() {
   return (
     <Provider store={store}>
@@ -41,11 +43,20 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path='/new-ticket' element={<NewTicket />} />
               <Route path='/my-ticket' element={<MyTicket />} />
-              <Route path='/ticket-approval' element={<TicketApproval />} />
-              <Route path='/performance' element={<Performance />} />
-              <Route path='/database' element={<Database />} />
-              <Route path='/setting' element={<Setting />} />
-              <Route path='/user-log-history' element={<UserLogHistory />} />
+
+              <Route element={<RoleProtectedRouteLayout roles={['operations']} element={<Forbidden />} />}>
+                <Route path='/ticket-approval' element={<TicketApproval />} />
+              </Route>
+
+              <Route element={<RoleProtectedRouteLayout roles={['operations', 'techsupport']} element={<Forbidden />} />}>
+                <Route path='/performance' element={<Performance />} />
+              </Route>
+
+              <Route element={<RoleProtectedRouteLayout roles={['admin']} element={<Forbidden />} />}>
+                <Route path='/database' element={<Database />} />
+                <Route path='/setting' element={<Setting />} />
+                <Route path='/user-log-history' element={<UserLogHistory />} />
+              </Route>
 
               <Route path='/profile' element={<Profile />} />
               <Route path='/profile/edit' element={<EditProfile />} />
