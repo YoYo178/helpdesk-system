@@ -32,8 +32,8 @@ export const Login = () => {
             <p className={styles['login-heading']}>Helpdesk System</p>
 
             <div className={styles['login-fields']}>
-                <input type='text' placeholder='Username' onChange={(e) => { setError(''); setUsername(e.target.value) }} value={username} />
-                <input type='password' placeholder='Password' onChange={(e) => { setError(''); setPassword(e.target.value) }} value={password} />
+                <input type='text' placeholder='Username' onChange={(e) => { setError(''); setUsername(e.target.value.trim()) }} value={username} />
+                <input type='password' placeholder='Password' onChange={(e) => { setError(''); setPassword(e.target.value.trim()) }} value={password} />
             </div>
 
             <button className={styles['login-button']} onClick={handleLogin}>Sign In</button>
