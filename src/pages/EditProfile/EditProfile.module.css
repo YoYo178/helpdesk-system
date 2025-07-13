@@ -1,0 +1,55 @@
+.edit-profile-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.edit-profile-title {
+    background-color: #55D6C2;
+    width: fit-content;
+    padding: 1rem 2rem;
+}
+
+.edit-profile-fields-container {
+    background-color: #C4C4C4;
+    height: 75%;
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.profile-field-pair {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+}
+
+.profile-field-label,
+.profile-field-input {
+    width: 50%;
+    height: 100%;
+}
+
+.profile-field-label {
+    background-color: #8f8c8c;
+    color: white;
+    padding: 0.5rem;
+    font-weight: 200;
+}
+
+.profile-field-submit-btn {
+    background-color: #55d6c2;
+    width: fit-content;
+
+    border: none;
+    padding: 1rem 3.5rem;
+    border-radius: 10px;
+}
+
+.profile-field-submit-btn:hover {
+    cursor: pointer;
+}
