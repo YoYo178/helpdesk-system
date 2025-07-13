@@ -1,0 +1,20 @@
+[
+    {
+        "id": "ABC1",
+        "name": "John Doe",
+        "department": "Admin",
+        "speciality": "Software"
+    },
+    {
+        "id": "ABC2",
+        "name": "Alice Addendall",
+        "department": "Operations",
+        "speciality": "Networking"
+    },
+    {
+        "id": "ABC3",
+        "name": "Bob Brady",
+        "department": "Technical Support",
+        "speciality": "Hardware"
+    }
+]
