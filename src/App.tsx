@@ -12,6 +12,7 @@ import { Login } from "./pages/Login/Login"
 import { Register } from "./pages/Register/Register"
 import { ForgotPassword } from "./pages/PasswordReset/ForgotPassword"
 import { Dashboard } from "./pages/Dashboard/Dashboard"
+import { NewTicket } from "./pages/NewTicket/NewTicket"
 function App() {
   return (
     <Provider store={store}>
@@ -29,7 +30,7 @@ function App() {
           <Route element={<ProtectedRouteLayout />}>
             <Route element={<DashboardLayout />}>
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path='/new-ticket' element={<h1>TODO!</h1>} />
+              <Route path='/new-ticket' element={<NewTicket />} />
               <Route path='/my-ticket' element={<h1>TODO!</h1>} />
               <Route path='/ticket-approval' element={<h1>TODO!</h1>} />
               <Route path='/performance' element={<h1>TODO!</h1>} />
