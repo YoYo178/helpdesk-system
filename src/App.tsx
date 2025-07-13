@@ -24,6 +24,8 @@ import { Profile } from "./pages/Profile/Profile"
 import { EditProfile } from "./pages/EditProfile/EditProfile"
 
 import { Forbidden } from "./pages/Forbidden/Forbidden"
+import { NotFound } from "./pages/NotFound/NotFound"
+
 function App() {
   return (
     <Provider store={store}>
@@ -64,7 +66,7 @@ function App() {
             </Route>
           </Route>
 
-          <Route path="*" element={<h1>Not found!</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </Provider>
