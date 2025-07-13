@@ -19,6 +19,7 @@ import { Performance } from "./pages/Performance/Performance"
 import { Database } from "./pages/Database/Database"
 import { Setting } from "./pages/Setting/Setting"
 import { UserLogHistory } from "./pages/UserLogHistory/UserLogHistory"
+import { Profile } from "./pages/Profile/Profile"
 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
               <Route path='/setting' element={<Setting />} />
               <Route path='/user-log-history' element={<UserLogHistory />} />
 
-              <Route path='/profile' element={<h1>TODO!</h1>} />
+              <Route path='/profile' element={<Profile />} />
               <Route path='/profile/edit' element={<h1>TODO!</h1>} />
 
             </Route>
