@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Provider } from "react-redux"
 
 import { store } from "./app/store"
 
 import { AuthLayout } from "./layouts/AuthLayout/AuthLayout"
+import { DashboardLayout } from "./layouts/DashboardLayout/DashboardLayout"
 import { PublicRouteLayout } from "./layouts/PublicRouteLayout/PublicRouteLayout"
 import { ProtectedRouteLayout } from "./layouts/ProtectedRouteLayout/ProtectedRouteLayout"
 
@@ -25,7 +26,7 @@ function App() {
           </Route>
 
           <Route element={<ProtectedRouteLayout />}>
-            <Route element={<Outlet />}> { /* TODO: DashboardLayout */}
+            <Route element={<DashboardLayout />}>
               <Route path="/dashboard" element={<h1>TODO!</h1>} />
               <Route path='/new-ticket' element={<h1>TODO!</h1>} />
               <Route path='/my-ticket' element={<h1>TODO!</h1>} />
