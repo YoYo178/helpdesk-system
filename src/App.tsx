@@ -15,6 +15,7 @@ import { Dashboard } from "./pages/Dashboard/Dashboard"
 import { NewTicket } from "./pages/NewTicket/NewTicket"
 import { MyTicket } from "./pages/MyTicket/MyTicket"
 import { TicketApproval } from "./pages/TicketApproval/TicketApproval"
+import { Performance } from "./pages/Performance/Performance"
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
               <Route path='/new-ticket' element={<NewTicket />} />
               <Route path='/my-ticket' element={<MyTicket />} />
               <Route path='/ticket-approval' element={<TicketApproval />} />
-              <Route path='/performance' element={<h1>TODO!</h1>} />
+              <Route path='/performance' element={<Performance />} />
               <Route path='/database' element={<h1>TODO!</h1>} />
               <Route path='/setting' element={<h1>TODO!</h1>} />
               <Route path='/user-log-history' element={<h1>TODO!</h1>} />
