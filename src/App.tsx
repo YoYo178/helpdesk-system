@@ -18,6 +18,7 @@ import { TicketApproval } from "./pages/TicketApproval/TicketApproval"
 import { Performance } from "./pages/Performance/Performance"
 import { Database } from "./pages/Database/Database"
 import { Setting } from "./pages/Setting/Setting"
+import { UserLogHistory } from "./pages/UserLogHistory/UserLogHistory"
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
               <Route path='/performance' element={<Performance />} />
               <Route path='/database' element={<Database />} />
               <Route path='/setting' element={<Setting />} />
-              <Route path='/user-log-history' element={<h1>TODO!</h1>} />
+              <Route path='/user-log-history' element={<UserLogHistory />} />
 
               <Route path='/profile' element={<h1>TODO!</h1>} />
               <Route path='/profile/edit' element={<h1>TODO!</h1>} />
