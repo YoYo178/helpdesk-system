@@ -1,14 +1,65 @@
 .auth-bg {
-    background-color: #55D6C2;
-  
-    width: 100vw;
-    min-height: 100vh;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    padding: 1rem;
-    overflow-y: auto;
-  }
-  
+  background-color: #55D6C2;
+
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  overflow-y: auto;
+
+  position: relative;
+}
+
+.auth-mock-users-list-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 1rem;
+  border-radius: 10px;
+
+  margin-left: 1rem;
+  margin-top: 1rem;
+
+  border: none;
+  background-color: #000000;
+  color: white
+}
+
+.auth-mock-users-list-btn:hover {
+  cursor: pointer;
+}
+
+.auth-mock-users-list-btn:active {
+  transform: translateX(1%) translateY(2%);
+}
+
+.auth-mock-users-list-backdrop {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 60%);
+  width: 100vw;
+  height: 100vh;
+
+  font-family: Roboto, sans-serif;
+}
+
+.auth-mock-users-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  width: 50%;
+  height: 65%;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+
+  padding: 2rem;
+
+  font-size: 1.2rem;
+}
