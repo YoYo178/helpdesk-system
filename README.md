@@ -1,69 +1,66 @@
-# React + TypeScript + Vite
+# 🧾 Helpdesk System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend-only **Helpdesk System design clone** built with React, TypeScript, Redux Toolkit, and Vite.  
+This project was created as part of an assignment to replicate the UI and behavior of a helpdesk dashboard.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔧 All styles written entirely from scratch — **no CSS frameworks** used.
+- 👥 Role-based access control using **mock user accounts**.
+- 🔐 Simple authentication simulation with hardcoded users.
+- 🧩 Modular folder structure using best practices.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+src/
+  app/            # Redux store and custom hooks
+  components/     # Reusable UI components
+  elements/       # Sidebar and layout elements
+  features/       # Auth, ticket, and audit data (JSON-based)
+  layouts/        # Route-based layout wrappers
+  pages/          # Core pages (Dashboard, Login, Tickets, etc.)
+  index.css       # Global styles
+  main.tsx        # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Install dependencies**
+   ```bash
+   yarn install
+   ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **Run the development server**
+   ```bash
+   yarn dev
+   ```
+
+3. **Build for production**
+   ```bash
+   yarn build
+   ```
+
+4. **Preview the production build**
+   ```bash
+   yarn preview
+   ```
+
+5. **Lint the code**
+   ```bash
+   yarn lint
+   ```
+
+## 📝 Notes
+- This is a static UI-only clone with no backend/API integration.
+- The app uses a custom base path: `/helpdesk-system/` (see `vite.config.ts`).
+- All roles and login credentials are visible on the login page.
+- Forms, buttons, toggles, and dropdowns are for visual purposes only.
+
+## 📄 License
+- This project is for educational and demo purposes only.
+- Not intended for production use.
