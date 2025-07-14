@@ -21,7 +21,7 @@ export const UserLogHistory = () => {
     const start = (pageNumber - 1) * limit;
     const end = start + limit;
     setPaginatedAudits(audits.slice(start, end));
-  }, [audits, pageNumber, limit]);
+  }, [pageNumber, limit]);
 
   const handlePageDecrement = () => {
     if (pageNumber <= 1)
@@ -68,7 +68,7 @@ export const UserLogHistory = () => {
             ))}
           </thead>
           <tbody>
-            {paginatedAudits.map((audit: Record<string, any>, index: number) => (
+            {paginatedAudits.map((audit: Record<string, string>, index: number) => (
               <tr className={styles['ulh-table-row']}>
                 {Object.keys(fields).map(value => {
                   if (value === 'no')

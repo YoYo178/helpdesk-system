@@ -99,7 +99,7 @@ export const TicketApproval = () => {
             ))}
           </thead>
           <tbody>
-            {paginatedTickets.map((ticket: Record<string, any>) => (
+            {paginatedTickets.map((ticket: Record<string, string | number>) => (
               <tr className={styles['tickets-table-row']}>
                 {Object.keys(roleFields).map(value => {
                   if (value === 'category')

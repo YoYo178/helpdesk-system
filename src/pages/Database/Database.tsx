@@ -99,7 +99,7 @@ export const Database = () => {
             })}
           </thead>
           <tbody>
-            {paginatedUsers.map((database: Record<string, any>) => (
+            {paginatedUsers.map((database: Record<string, string>) => (
               <tr className={styles['database-table-row']}>
                 {Object.keys(fields).map(value => {
                   if (value === 'checkbox')

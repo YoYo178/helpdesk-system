@@ -72,8 +72,6 @@ export const MyTicket = () => {
   const action = searchParams.get('action');
   const selectedTicket = paginatedTickets.find(ticket => parseInt(ticket.id) === ticketId)
 
-  console.log(ticketId, action)
-
   useEffect(() => {
     const query = filterText.toLowerCase();
     const results = tickets.filter(obj => {
@@ -95,7 +93,7 @@ export const MyTicket = () => {
 
     setFilteredTickets(results);
     setPageNumber(1);
-  }, [filterText])
+  }, [filterText, user.role])
 
   useEffect(() => {
     const start = (pageNumber - 1) * limit;
@@ -227,7 +225,7 @@ export const MyTicket = () => {
               })}
             </thead>
             <tbody className={styles['tickets-table-body']}>
-              {paginatedTickets.map((ticket: Record<string, any>) => (
+              {paginatedTickets.map((ticket: Record<string, string | number>) => (
                 <tr className={styles['tickets-table-row']}>
                   {Object.keys(roleFields[user.role]).map(value => {
                     if (value === 'status')
@@ -251,7 +249,7 @@ export const MyTicket = () => {
                       return (
                         <td className={styles['tickets-table-row-data']} style={{ fontSize: '1.4rem' }}>
                           {Array.from({ length: 5 }).map((_, i) => {
-                            const rating = Math.round(ticket[value] * 2) / 2;
+                            const rating = Math.round(+ticket[value] * 2) / 2;
 
                             if (i + 1 <= rating) {
                               return <IoStar key={i} style={{ color: '#FFC632' }} />

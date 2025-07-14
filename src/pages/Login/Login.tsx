@@ -19,8 +19,14 @@ export const Login = () => {
         const user = users.find(usr => usr.username === username && usr.password === password);
 
         if (user) {
-            const { password, ...rest } = user;
-            dispatch(login(rest as Omit<User, 'password'>))
+            const userObj = {
+                name: user.name,
+                username: user.username,
+                email: user.email,
+                role: user.role,
+                id: user.id
+            }
+            dispatch(login(userObj as Omit<User, 'password'>))
             navigate('/dashboard')
         } else {
             setError("Invalid credentials")
