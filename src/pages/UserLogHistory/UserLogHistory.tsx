@@ -46,57 +46,60 @@ export const UserLogHistory = () => {
   }
 
   return (
-    <div className={styles['ulh-container']}>
-      <h1 style={{ textAlign: 'center' }}>User Log History</h1>
-      <div className={styles['ulh-list-container']}>
-        <div className={styles['ulh-amount-dropdown']}>
-          &nbsp;Show:&nbsp;
-          <select value={limit} onChange={(e) => { setLimit(parseInt(e.target.value)); setPageNumber(1) }}>
-            <option value="1">1</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-          </select>
-          &nbsp;Entries&nbsp;
-        </div>
+    <>
+      <title>User Log History | Helpdesk system</title>
+      <div className={styles['ulh-container']}>
+        <h1 style={{ textAlign: 'center' }}>User Log History</h1>
+        <div className={styles['ulh-list-container']}>
+          <div className={styles['ulh-amount-dropdown']}>
+            &nbsp;Show:&nbsp;
+            <select value={limit} onChange={(e) => { setLimit(parseInt(e.target.value)); setPageNumber(1) }}>
+              <option value="1">1</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+            </select>
+            &nbsp;Entries&nbsp;
+          </div>
 
-        <table className={styles['ulh-table']}>
-          <thead>
-            {Object.values(fields).map(displayName => (
-              <th className={styles['ulh-table-header']}>{displayName}</th>
-            ))}
-          </thead>
-          <tbody>
-            {paginatedAudits.map((audit: Record<string, string>, index: number) => (
-              <tr className={styles['ulh-table-row']}>
-                {Object.keys(fields).map(value => {
-                  if (value === 'no')
+          <table className={styles['ulh-table']}>
+            <thead>
+              {Object.values(fields).map(displayName => (
+                <th className={styles['ulh-table-header']}>{displayName}</th>
+              ))}
+            </thead>
+            <tbody>
+              {paginatedAudits.map((audit: Record<string, string>, index: number) => (
+                <tr className={styles['ulh-table-row']}>
+                  {Object.keys(fields).map(value => {
+                    if (value === 'no')
+                      return (
+                        <td className={styles['ulh-table-row-data']}>{index + 1}</td>
+                      )
+
                     return (
-                      <td className={styles['ulh-table-row-data']}>{index + 1}</td>
+                      <td className={styles['ulh-table-row-data']}>{audit[value]}</td>
                     )
-
-                  return (
-                    <td className={styles['ulh-table-row-data']}>{audit[value]}</td>
-                  )
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className={styles['ulh-entry-info']}>
-          <p>
-            Showing {(pageNumber - 1) * limit + 1} to {Math.min(pageNumber * limit, audits.length)} of {audits.length} entries
-          </p>
-          <div className={styles['ulh-pagination']}>
-            <button onClick={handleJumpToStart}><MdKeyboardDoubleArrowLeft /></button>
-            <button onClick={handlePageDecrement}><MdKeyboardArrowLeft /></button>
-            <p>{pageNumber}</p>
-            <button onClick={handlePageIncrement}><MdKeyboardArrowRight /></button>
-            <button onClick={handleJumpToEnd}><MdKeyboardDoubleArrowRight /></button>
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className={styles['ulh-entry-info']}>
+            <p>
+              Showing {(pageNumber - 1) * limit + 1} to {Math.min(pageNumber * limit, audits.length)} of {audits.length} entries
+            </p>
+            <div className={styles['ulh-pagination']}>
+              <button onClick={handleJumpToStart}><MdKeyboardDoubleArrowLeft /></button>
+              <button onClick={handlePageDecrement}><MdKeyboardArrowLeft /></button>
+              <p>{pageNumber}</p>
+              <button onClick={handlePageIncrement}><MdKeyboardArrowRight /></button>
+              <button onClick={handleJumpToEnd}><MdKeyboardDoubleArrowRight /></button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

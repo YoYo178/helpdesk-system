@@ -125,6 +125,7 @@ export const MyTicket = () => {
 
   return (
     <>
+      <title>My Tickets | Helpdesk system</title>
       {ticketId !== 0 ? (
         <div className={styles['ticket-modal-backdrop']} onClick={() => navigate('/my-ticket')}>
           <div className={styles['ticket-modal']} onClick={(e) => e.stopPropagation()}>

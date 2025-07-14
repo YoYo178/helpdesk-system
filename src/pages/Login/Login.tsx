@@ -34,21 +34,24 @@ export const Login = () => {
     }
 
     return (
-        <div className={styles['login-modal']}>
-            <p className={styles['login-heading']}>Helpdesk System</p>
+        <>
+            <title>Login | Helpdesk system</title>
+            <div className={styles['login-modal']}>
+                <p className={styles['login-heading']}>Helpdesk System</p>
 
-            <div className={styles['login-fields']}>
-                <input type='text' placeholder='Username' onChange={(e) => { setError(''); setUsername(e.target.value.trim()) }} value={username} />
-                <input type='password' placeholder='Password' onChange={(e) => { setError(''); setPassword(e.target.value.trim()) }} value={password} />
+                <div className={styles['login-fields']}>
+                    <input type='text' placeholder='Username' onChange={(e) => { setError(''); setUsername(e.target.value.trim()) }} value={username} />
+                    <input type='password' placeholder='Password' onChange={(e) => { setError(''); setPassword(e.target.value.trim()) }} value={password} />
+                </div>
+
+                <button className={styles['login-button']} onClick={handleLogin}>Sign In</button>
+
+                <div className={styles['references']}>
+                    <Link to="/forgot-password" className={styles['forgot-password-redirect-button']}>Forgot password</Link>
+                    <Link to="/register" className={styles['register-redirect-button']}>Sign Up</Link>
+                </div>
+                {error && <p style={{ color: 'red' }}>{error}</p>}
             </div>
-
-            <button className={styles['login-button']} onClick={handleLogin}>Sign In</button>
-
-            <div className={styles['references']}>
-                <Link to="/forgot-password" className={styles['forgot-password-redirect-button']}>Forgot password</Link>
-                <Link to="/register" className={styles['register-redirect-button']}>Sign Up</Link>
-            </div>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-        </div>
+        </>
     )
 }

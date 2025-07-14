@@ -13,20 +13,23 @@ const options = {
 
 export const EditProfile = () => {
     return (
-        <div className={styles['edit-profile-container']}>
-            <h1 className={styles['edit-profile-header']}>User Profile</h1>
-            <div className={styles['edit-profile-title']}>Edit Account</div>
-            <div className={styles['edit-profile-fields-container']}>
-                {Object.entries(options).map(([name, obj]) => {
-                    return (
-                        <div className={styles['profile-field-pair']}>
-                            <p className={styles['profile-field-label']}>{obj.label}</p>
-                            <input name={name} type={obj.type} className={styles['profile-field-input']} />
-                        </div>
-                    )
-                })}
-                <button className={styles['profile-field-submit-btn']}>Update User</button>
+        <>
+            <title>Edit profile | Helpdesk system</title>
+            <div className={styles['edit-profile-container']}>
+                <h1 className={styles['edit-profile-header']}>User Profile</h1>
+                <div className={styles['edit-profile-title']}>Edit Account</div>
+                <div className={styles['edit-profile-fields-container']}>
+                    {Object.entries(options).map(([name, obj]) => {
+                        return (
+                            <div className={styles['profile-field-pair']}>
+                                <p className={styles['profile-field-label']}>{obj.label}</p>
+                                <input name={name} type={obj.type} className={styles['profile-field-input']} />
+                            </div>
+                        )
+                    })}
+                    <button className={styles['profile-field-submit-btn']}>Update User</button>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
