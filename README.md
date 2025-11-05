@@ -32,27 +32,27 @@ src/
 
 1. **Install dependencies**
    ```bash
-   yarn install
+   pnpm install
    ```
 
 2. **Run the development server**
    ```bash
-   yarn dev
+   pnpm dev
    ```
 
 3. **Build for production**
    ```bash
-   yarn build
+   pnpm build
    ```
 
 4. **Preview the production build**
    ```bash
-   yarn preview
+   pnpm preview
    ```
 
 5. **Lint the code**
    ```bash
-   yarn lint
+   pnpm lint
    ```
 
 ## 📝 Notes
